@@ -16,7 +16,7 @@ function ebLoadedCheck() {
 if(typeof jQuery != "undefined") {
 if(jQuery.fn.ebFrontEnd) {
   jQuery("#ebFrontEndFrame").ebFrontEnd({
-  customerId: <? echo $customerId ?>,
+  customerId: <?= $customerId; ?>,
   localeId: 2,
   disableScroll: "true",
   frameWidth: "auto",
