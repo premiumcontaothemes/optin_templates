@@ -1,0 +1,16 @@
+<?php
+/**
+ * Please fill in your pubid below
+ */
+$pubid = 'ra-4eba810964bce718';
+
+/**
+ * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
+ */
+?>
+<?php
+$GLOBALS['TL_HEAD'][] = '<script data-privacy="1" data-src="//s7.addthis.com/js/300/addthis_widget.js#pubid=' . $pubid .'"></script>'
+?>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools -->
+<div class="addthis_sharing_toolbox"></div>
