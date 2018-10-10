@@ -1,0 +1,68 @@
+<?php
+/**
+ * Please fill in your appId and facebookPageUrl below
+ */
+$appId = '189967807722789';
+$facebookPageUrl = 'PremiumContaoThemes';
+
+
+
+$data-tabs ='timeline';
+$data-small-header ='false';
+$data-adapt-container-width ='true';
+$data-hide-cover ='false';
+$data-show-facepile ='true';
+$data-width ='500';
+$data-height ='100';
+
+/* More settings and infos: https://developers.facebook.com/docs/plugins/page-plugin */
+
+/**
+ * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
+ */
+ ?>
+ 
+ <?php
+$GLOBALS['TL_HEAD'][] = "	
+<!-- Google Tag Manager -->
+<script>
+function initFacebookPagePlugin()
+{
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v3.1&appId=" . $appId . "&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+
+}
+
+// Optin privacy setting token
+if(localStorage.getItem('user_privacy_settings') >= 1)
+{
+  	initFacebookPagePlugin();
+}
+
+// listen to Eclipse.user_privacy Event
+jQuery(document).on('Eclipse.user_privacy',function(event,params)
+{
+	if(params.level >= 1)
+	{
+		initFacebookPagePlugin();
+	}
+});
+</script>
+<!-- End Google Tag Manager -->
+";
+?>
+
+
+<div id="fb-root"></div>
+
+<div class="fb-page" data-href="https://www.facebook.com/<?= $facebookPageUrl; ?>/" data-tabs="<?= $data-tabs; ?>" data-small-header="<?= $data-small-header; ?>" data-adapt-container-width="<?= $data-adapt-container-width; ?>" data-hide-cover="<?= $data-hide-cover; ?>" data-show-facepile="<?= $data-show-facepile; ?>" data-width="<?= $data-width; ?>" data-height="<?= $data-height; ?>"><blockquote cite="https://www.facebook.com/<?= $facebookPageUrl; ?>/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/<?= $facebookPageUrl; ?>/">Premium Contao Themes</a></blockquote></div>
+
+
+
+
+
