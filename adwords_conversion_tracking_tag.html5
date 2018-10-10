@@ -2,9 +2,9 @@
 /**
  * Please fill in the following variables
  */
-$google_conversion_id = '';
-$google_conversion_label = '';
-$google_conversion_value = '';
+$google_conversion_id = '123456789';
+$google_conversion_label = 'label123456789';
+$google_conversion_value = '1.0';
 $google_conversion_currency = 'EUR';
 $google_remarketing_only = 'false';
 
@@ -16,10 +16,10 @@ $google_remarketing_only = 'false';
 <!-- Google Code for Conversion Page -->
 <script type="text/javascript">
 /* <![CDATA[ */
-var google_conversion_id = <?php echo $google_conversion_id ?>;
-var google_conversion_label = <?php echo $google_conversion_label ?>;
+var google_conversion_id = '<?php echo $google_conversion_id ?>';
+var google_conversion_label = '<?php echo $google_conversion_label ?>';
 var google_conversion_value = <?php echo $google_conversion_value ?>;
-var google_conversion_currency = <?php echo $google_conversion_currency ?>;
+var google_conversion_currency = '<?php echo $google_conversion_currency ?>';
 var google_remarketing_only = <?php echo $google_remarketing_only ?>;
 /* ]]> */
 </script>
