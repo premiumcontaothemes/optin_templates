@@ -1,0 +1,21 @@
+<div id="ebFrontEndFrame"></div>
+<script data-src="http://www.easy-booking.at/clientWeb001/js/jquery.easybooking.frontend.v2.js"></script>
+<script>
+function ebLoadedCheck() {
+if(typeof jQuery != "undefined") {
+if(jQuery.fn.ebFrontEnd) {
+  jQuery("#ebFrontEndFrame").ebFrontEnd({
+  customerId: 331,
+  localeId: 2,
+  disableScroll: "true",
+  frameWidth: "auto",
+  frameHeight: "auto",
+  resizeInterval: 500
+});
+} else {setTimeout(ebLoadedCheck,200);}
+} else {setTimeout(ebLoadedCheck,200);}
+}
+
+setTimeout(ebLoadedCheck,500);
+</script>
+
