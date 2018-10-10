@@ -9,6 +9,36 @@
  -------------------------------------------------------------------------
 */
 ?>
+<?php
+$GLOBALS['TL_HEAD'][] = "	
+<!-- Mailchimp Validation -->
+<script data-privacy='1' type='text/javascript' data-src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script>
+<script>
+function initMailchimpValidation()
+{
+	(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);
+}
+
+// Optin privacy setting token
+if(localStorage.getItem('user_privacy_settings') >= 1)
+{
+  	initMailchimpValidation();
+}
+
+// listen to Eclipse.user_privacy Event
+jQuery(document).on('Eclipse.user_privacy',function(event,params)
+{
+	if(params.level >= 1)
+	{
+		initMailchimpValidation();
+	}
+});
+</script>
+<!-- End Mailchimp Validation -->
+";
+?>
+
+
 
 <!-- Example: Signup form > Classic (insert and edit your code here) -->
 
@@ -75,5 +105,4 @@
     </div>
 </form>
 </div>
-<script data-privacy="1" type='text/javascript' data-src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='MMERGE5';ftypes[5]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
 <!--End mc_embed_signup-->
