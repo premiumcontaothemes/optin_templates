@@ -1,0 +1,17 @@
+<?php
+/**
+ * 
+ Instructions ------------------------------------------------------------
+	Step 1: Generate your code on: https://www.holidaycheck.de/widgets
+	Step 2: Insert code below
+	Step 3: Add data-privacy="1" in <script> and <img> tags
+	Step 4: Rename "src=" to "data-src="
+	
+	Example:
+	<script data-privacy="1" data-src="https://www.holidaycheck.de/widgets?step=code&type=code&options=hotel-1-1335651-de_DE-s-b-1-1---0" type="text/javascript"></script><div id="holidaycheck-widget-hotel-1-1335651-de_DE-s-b-1-1---0"><div id="holidaycheck_widget_placeholder-1335651" style="width:120px;padding:5px;background:#0058a2;"><a href="https://www.holidaycheck.de/hi/25hours-hotel-bikini-berlin/e8ce231b-4866-3356-a49e-9176f5ae6855"><img alt="Hotels mit Hotelbewertungen bei HolidayCheck" data-privacy="1" data-src="https://www.holidaycheck.de/widgets/logo_xlarge.png" border="0"></a></div></div>
+ -------------------------------------------------------------------------
+*/
+?>
+
+<!-- insert and edit your code here -->
+<script data-privacy="1" data-src="https://www.holidaycheck.de/widgets?step=code&type=code&options=hotel-1-1335651-de_DE-s-b-1-1---0" type="text/javascript"></script><div id="holidaycheck-widget-hotel-1-1335651-de_DE-s-b-1-1---0"><div id="holidaycheck_widget_placeholder-1335651" style="width:120px;padding:5px;background:#0058a2;"><a href="https://www.holidaycheck.de/hi/25hours-hotel-bikini-berlin/e8ce231b-4866-3356-a49e-9176f5ae6855"><img alt="Hotels mit Hotelbewertungen bei HolidayCheck" data-privacy="1" data-src="https://www.holidaycheck.de/widgets/logo_xlarge.png" border="0"></a></div></div>
