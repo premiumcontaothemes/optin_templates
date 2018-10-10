@@ -1,17 +1,32 @@
+<?php
+/**
+ * Please fill in the following variables
+ */
+$google_conversion_id = '';
+$google_conversion_label = '';
+$google_conversion_value = '';
+$google_conversion_currency = 'EUR';
+$google_remarketing_only = 'false';
+
+/**
+ * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
+ */
+?>
+
 <!-- Google Code for Conversion Page -->
 <script type="text/javascript">
 /* <![CDATA[ */
-var google_conversion_id = 123456789;
-var google_conversion_label = "JjDPCMm--HUQzLe8jAM";
-var google_conversion_value = 1.00;
-var google_conversion_currency = "EUR";
-var google_remarketing_only = false;
+var google_conversion_id = <?php echo $google_conversion_id ?>;
+var google_conversion_label = <?php echo $google_conversion_label ?>;
+var google_conversion_value = <?php echo $google_conversion_value ?>;
+var google_conversion_currency = <?php echo $google_conversion_currency ?>;
+var google_remarketing_only = <?php echo $google_remarketing_only ?>;
 /* ]]> */
 </script>
 <script data-privacy="3" type="text/javascript" data-src="//www.googleadservices.com/pagead/conversion.js">
 </script>
 <noscript>
 <div style="display:inline;">
-<img height="1" width="1" style="border-style:none;" alt="" data-privacy="3" data-src="//www.googleadservices.com/pagead/conversion/831462348/?value=1.00&amp;currency_code=EUR&amp;label=JjDPCMm--HUQzLe8jAM&amp;guid=ON&amp;script=0"/>
+<img height="1" width="1" style="border-style:none;" alt="" data-privacy="3" data-src="//www.googleadservices.com/pagead/conversion/<?php echo $google_conversion_id ?>/?value=<?php echo $google_conversion_value ?>&amp;currency_code=<?php echo $google_conversion_currency ?>&amp;label=<?php echo $google_conversion_label ?>&amp;guid=ON&amp;script=<?php echo $google_remarketing_only ?>"/>
 </div>
 </noscript>
