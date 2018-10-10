@@ -1,5 +1,5 @@
 <div id="ebFrontEndFrame"></div>
-<script data-src="http://www.easy-booking.at/clientWeb001/js/jquery.easybooking.frontend.v2.js"></script>
+<script data-privacy="1" data-src="http://www.easy-booking.at/clientWeb001/js/jquery.easybooking.frontend.v2.js"></script>
 <script>
 function ebLoadedCheck() {
 if(typeof jQuery != "undefined") {
