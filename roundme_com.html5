@@ -1,6 +1,6 @@
 <?php
 /**
- * Please fill in your customerId below
+ * Please fill in your embedSrc
  */
 $embedSrc = 'https://roundme.com/embed/315890/1032245';
 
