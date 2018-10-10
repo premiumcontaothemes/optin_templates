@@ -1,3 +1,14 @@
+<?php
+/**
+ * Please fill in your customerId below
+ */
+$customerId = '331';
+
+/**
+ * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
+ */
+?>
+
 <div id="ebFrontEndFrame"></div>
 <script data-privacy="1" data-src="http://www.easy-booking.at/clientWeb001/js/jquery.easybooking.frontend.v2.js"></script>
 <script>
@@ -5,7 +16,7 @@ function ebLoadedCheck() {
 if(typeof jQuery != "undefined") {
 if(jQuery.fn.ebFrontEnd) {
   jQuery("#ebFrontEndFrame").ebFrontEnd({
-  customerId: 331,
+  customerId: <? echo $customerId ?>,
   localeId: 2,
   disableScroll: "true",
   frameWidth: "auto",
