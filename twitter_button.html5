@@ -1,0 +1,15 @@
+<?php
+/**
+ * Please fill in your twitter-user below
+ */
+$twitterUser = 'contaothemes';
+
+/* widget generated on: https://publish.twitter.com/ */
+
+
+/**
+ * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
+ */
+ ?>
+ <a href="https://twitter.com/contaothemes?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @<?= $twitterUser; ?></a>
+ <script async data-privacy="1" data-src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
