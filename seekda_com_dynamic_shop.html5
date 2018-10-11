@@ -15,4 +15,4 @@ $SeekdaURL ='https://cloud.seekda.com/w/w-dynamic-shop';
 	$CompleteScriptTag = $SeekdaURL . '/hotel:' . $HotelId . '/' . $ApiKey . '.js';
 	$GLOBALS['TL_HEAD'][] = '<script data-privacy="1" data-src="' . $CompleteScriptTag . '"></script>';
 ?>
-<div class="skd-widget" data-skd-widget="check-availability" data-skd-send-to-groups="A" data-skd-listen-to-groups="B"><div style="width:100%; min-height:50px; text-align:center;"><img data-privacy="2" data-src="https://static.seekda.com/assets/images/skd_spinner.gif" /><noscript>Your browser doesn't support JavaScript or it has been disabled. To use the booking engine, please make sure to get JavaScript running.</noscript></div></div>
+<div class="skd-widget" data-skd-widget="check-availability" data-skd-send-to-groups="A" data-skd-listen-to-groups="B"><div style="width:100%; min-height:50px; text-align:center;"><img data-privacy="1" data-src="https://static.seekda.com/assets/images/skd_spinner.gif" /></div></div>

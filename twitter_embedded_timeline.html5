@@ -1,6 +1,6 @@
 <?php
 /**
- * Please fill in your twitter-user below
+ * Please fill in your twitter-user
  */
 $twitterUser = 'contaothemes';
 

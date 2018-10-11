@@ -7,9 +7,7 @@ $GoogleTagManagerKey = 'GTM-ABCDEFG';
 /**
  * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
  */
-?>
 
-<?php
 $GLOBALS['TL_HEAD'][] = "	
 <!-- Google Tag Manager -->
 <script>
@@ -40,13 +38,3 @@ jQuery(document).on('Eclipse.user_privacy',function(event,params)
 <!-- End Google Tag Manager -->
 ";
 ?>
-
-<?php 
-// Attention: Testing privacy settings with PHP and without Javascript only works properly with a disabled page cache!	
-?>
-<?php if( \Input::cookie('user_privacy_settings') >= 3 ): ?>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=<?= $GoogleTagManagerKey; ?>"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-<?php endif; ?>

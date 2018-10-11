@@ -26,7 +26,5 @@ if(jQuery.fn.ebFrontEnd) {
 } else {setTimeout(ebLoadedCheck,200);}
 } else {setTimeout(ebLoadedCheck,200);}
 }
-
 setTimeout(ebLoadedCheck,500);
 </script>
-

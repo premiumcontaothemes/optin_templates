@@ -1,6 +1,6 @@
 <?php
 /**
- * Please fill in your appId and facebookPageUrl below
+ * Please fill in your appId, facebookPageUrl, facebookPageName here
  */
 $appId = '189967807722789';
 $facebookPageUrl = 'PremiumContaoThemes';
@@ -15,7 +15,6 @@ $dataAdaptContainerWidth = 'true';
 $dataHideCover = 'false';
 $dataShowFacepile = 'true';
 
-
 /**
  * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
  */
@@ -23,7 +22,7 @@ $dataShowFacepile = 'true';
  
  <?php
 $GLOBALS['TL_HEAD'][] = "	
-<!-- Google Tag Manager -->
+<!-- Facebook Page Plugin -->
 <script>
 function initFacebookPagePlugin()
 {
@@ -52,7 +51,7 @@ jQuery(document).on('Eclipse.user_privacy',function(event,params)
 	}
 });
 </script>
-<!-- End Google Tag Manager -->
+<!-- End Facebook Page Plugin -->
 ";
 ?>
 <div id="fb-root"></div>

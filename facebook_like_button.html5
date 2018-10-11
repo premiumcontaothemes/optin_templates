@@ -1,6 +1,6 @@
 <?php
 /**
- * Please fill in your appId and facebookPageUrl below
+ * Please fill in your appId
  */
 $appId = '189967807722789';
 

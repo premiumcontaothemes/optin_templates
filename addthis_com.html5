@@ -11,6 +11,5 @@ $pubid = 'ra-4eba810964bce718';
 <?php
 $GLOBALS['TL_HEAD'][] = '<script data-privacy="1" data-src="//s7.addthis.com/js/300/addthis_widget.js#pubid=' . $pubid .'"></script>'
 ?>
-
 <!-- Go to www.addthis.com/dashboard to customize your tools -->
 <div class="addthis_sharing_toolbox"></div>
