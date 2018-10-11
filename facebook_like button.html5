@@ -1,0 +1,45 @@
+<?php
+/**
+ * Please fill in your appId and facebookPageUrl below
+ */
+$appId = '189967807722789';
+
+/**
+ * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
+ */
+ ?>
+ <?php
+$GLOBALS['TL_HEAD'][] = "	
+<!-- Facebook Like Button -->
+<script>
+function initFacebookLikePlugin()
+{
+(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = 'https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v3.1&appId=" . $appId . "&autoLogAppEvents=1';
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+}
+
+// Optin privacy setting token
+if(localStorage.getItem('user_privacy_settings') >= 1)
+{
+  	initFacebookLikePlugin();
+}
+
+// listen to Eclipse.user_privacy Event
+jQuery(document).on('Eclipse.user_privacy',function(event,params)
+{
+	if(params.level >= 1)
+	{
+		initFacebookLikePlugin();
+	}
+});
+</script>
+<!-- End Facebook Like Button -->
+";
+?>
+<div id="fb-root"></div>
+<div class="fb-like" data-href="<?= $this->replaceInsertTags('{{env::url}}');?>/<?= $this->replaceInsertTags('{{env::request}}');?>" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
