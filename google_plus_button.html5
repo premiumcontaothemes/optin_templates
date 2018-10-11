@@ -1,0 +1,4 @@
+<?php
+$GLOBALS['TL_HEAD'][] = '<script data-privacy="1" data-src="https://apis.google.com/js/platform.js"></script>'
+?>
+<g:plusone></g:plusone>
