@@ -1,0 +1,48 @@
+<?php
+$GLOBALS['TL_HEAD'][] = "
+
+/* external javascript file (if required)
+------------------------------------------
+*/
+
+<script data-privacy='3' data-src='https://yourDomain.com/externalJavaScriptFile.js'></script>
+
+
+
+/* inline javascript (if required)
+------------------------------------------
+*/
+
+<script>
+	function initYourFunction()
+	{
+	// start - insert your js code without <script> tag here
+	
+		
+	// end - insert your js code without <script> tag here
+	}
+	
+	// Optin privacy setting token
+	if(localStorage.getItem('user_privacy_settings') >= 3)
+	{
+	  	initYourFunction();
+	}
+	
+	// listen to Eclipse.user_privacy Event
+	jQuery(document).on('Eclipse.user_privacy',function(event,params)
+	{
+		if(params.level >= 3)
+		{
+			initYourFunction();
+		}
+	});
+</script>
+
+/* end inline javascript (if required)
+------------------------------------------
+*/
+";
+?>
+
+<!-- insert your HTML Markup here (if required) -->
+<div></div>
