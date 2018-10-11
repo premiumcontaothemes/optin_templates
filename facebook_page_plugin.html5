@@ -4,7 +4,7 @@
  */
 $appId = '189967807722789';
 $facebookPageUrl = 'PremiumContaoThemes';
-
+$facebookPageName = 'Premium Contao Themes';
 
 /**
  * Extended settings (read more: https://developers.facebook.com/docs/plugins/page-plugin)
@@ -55,13 +55,5 @@ jQuery(document).on('Eclipse.user_privacy',function(event,params)
 <!-- End Google Tag Manager -->
 ";
 ?>
-
-
 <div id="fb-root"></div>
-
-<div class="fb-page" data-href="https://www.facebook.com/<?= $facebookPageUrl; ?>/" data-tabs="<?= $dataTabs; ?>" data-small-header="<?= $dataSmallHeader; ?>" data-adapt-container-width="<?= $dataAdaptContainerWidth; ?>" data-hide-cover="<?= $dataHideCover; ?>" data-show-facepile="<?= $dataShowFacepile; ?>"><blockquote cite="https://www.facebook.com/<?= $facebookPageUrl; ?>/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/<?= $facebookPageUrl; ?>/">Premium Contao Themes</a></blockquote></div>
-
-
-
-
-
+<div class="fb-page" data-href="https://www.facebook.com/<?= $facebookPageUrl; ?>/" data-tabs="<?= $dataTabs; ?>" data-small-header="<?= $dataSmallHeader; ?>" data-adapt-container-width="<?= $dataAdaptContainerWidth; ?>" data-hide-cover="<?= $dataHideCover; ?>" data-show-facepile="<?= $dataShowFacepile; ?>"><blockquote cite="https://www.facebook.com/<?= $facebookPageUrl; ?>/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/<?= $facebookPageUrl; ?>/"><?= $facebookPageName; ?></a></blockquote></div>
