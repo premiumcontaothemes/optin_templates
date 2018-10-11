@@ -1,0 +1,29 @@
+<?php
+/**
+ * Please fill in the following variables
+ */
+$google_conversion_id = '123456789';
+
+/**
+ * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
+ */
+?>
+
+<!-- Google Code für ein Remarketing-Tag -->
+<!--------------------------------------------------
+Remarketing-Tags dürfen nicht mit personenbezogenen Daten verknüpft oder auf Seiten platziert werden, die sensiblen Kategorien angehören. Weitere Informationen und Anleitungen zur Einrichtung des Tags erhalten Sie unter: http://google.com/ads/remarketingsetup
+--------------------------------------------------->
+<script type="text/javascript">
+/* <![CDATA[ */
+var google_conversion_id = '<?php echo $google_conversion_id ?>';
+var google_custom_params = window.google_tag_params;
+var google_remarketing_only = true;
+/* ]]> */
+</script>
+<script data-privacy="3" type="text/javascript" data-src="//www.googleadservices.com/pagead/conversion.js">
+</script>
+<noscript>
+<div style="display:inline;">
+<img data-privacy="3" height="1" width="1" style="border-style:none;" alt="" data-src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/<?php echo $google_conversion_id ?>/?guid=ON&amp;script=0"/>
+</div>
+</noscript>
