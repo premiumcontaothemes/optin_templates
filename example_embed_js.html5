@@ -8,6 +8,12 @@ $GLOBALS['TL_HEAD'][] = "
 <script data-privacy='3' data-src='https://yourDomain.com/externalJavaScriptFile.js'></script>
 
 
+/* external css file (if required)
+------------------------------------------
+*/
+
+<link data-privacy='3' data-href='meinExternerCode.css'>
+
 
 /* inline javascript (if required)
 ------------------------------------------
