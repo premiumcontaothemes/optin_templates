@@ -1,41 +1,41 @@
-<?php
-/**
- * put your facebook pixel ID here
- */
+
+<?php 
+// put your facebook pixel ID here
 $facebookPixelId = '123456789';	
+?>
 
-/**
- * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
- */
-
-$GLOBALS['TL_HEAD'][] = "	
+<?php $GLOBALS['TL_HEAD'][] = '
+<!-- Facebook Pixel Code -->
+<script id="js_facebook_pixel" data-privacy="3" data-src="https://connect.facebook.net/en_US/fbevents.js"></script>
 <script>
+
+!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+n.push=n;n.loaded=!0;n.version="2.0";n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+document,"script","");
+
+function f_b_q(arg1,arg2) 
+{
+	// call real fbq function here
+	fbq(arg1,arg2);	
+}
+	
 function initFacebookPixel()
 {
-<!-- Facebook Pixel Code -->
-
-	!function(f,b,e,v,n,t,s)
-	{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-	n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-	if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-	n.queue=[];t=b.createElement(e);t.async=!0;
-	t.src=v;s=b.getElementsByTagName(e)[0];
-	s.parentNode.insertBefore(t,s)}(window, document,'script',
-	'https://connect.facebook.net/en_US/fbevents.js');
-	fbq('init', '" . $facebookPixelId . "');
-	fbq('track', 'PageView');
-
-<!-- End Facebook Pixel Code -->
+	// trick FB script with an individual function name
+	f_b_q("init", '.$facebookPixelId.');
+	f_b_q("track", "PageView");
 }
 
-// Optin privacy setting token
-if(localStorage.getItem('user_privacy_settings') >= 3)
+// Optin privacy setting token (level 3 statistic)
+if(localStorage.getItem("user_privacy_settings") >= 3)
 {
   	initFacebookPixel();
 }
 
 // listen to Eclipse.user_privacy Event
-jQuery(document).on('Eclipse.user_privacy',function(event,params)
+jQuery(document).on("Eclipse.user_privacy",function(event,params)
 {
 	if(params.level >= 3)
 	{
@@ -43,5 +43,6 @@ jQuery(document).on('Eclipse.user_privacy',function(event,params)
 	}
 });
 </script>
-";
+<!-- End Facebook Pixel Code -->
+'; 
 ?>
