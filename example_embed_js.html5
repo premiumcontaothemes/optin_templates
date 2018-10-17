@@ -12,7 +12,7 @@ $GLOBALS['TL_HEAD'][] = "
 ------------------------------------------
 */
 
-<link data-privacy='3' data-href='meinExternerCode.css'>
+<link data-privacy='3' data-src='meinExternerCode.css'>
 
 
 /* inline javascript (if required)
