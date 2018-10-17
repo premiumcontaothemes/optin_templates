@@ -52,3 +52,6 @@ $GLOBALS['TL_HEAD'][] = "
 
 <!-- insert your HTML Markup here (if required) -->
 <div></div>
+
+<!-- insert your image here (if required) -->
+<img data-privacy="2" data-src="meinExternesBild.jpg">
