@@ -12,4 +12,4 @@ $twitterUser = 'contaothemes';
  */
  ?>
  <a href="https://twitter.com/contaothemes?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @<?= $twitterUser; ?></a>
- <script async data-privacy="1" data-src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+ <script async data-privacy="2" data-src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

@@ -24,7 +24,7 @@ function initFacebookLikePlugin()
 }
 
 // Optin privacy setting token
-if(localStorage.getItem('user_privacy_settings') >= 1)
+if(localStorage.getItem('user_privacy_settings') >= 2)
 {
   	initFacebookLikePlugin();
 }
@@ -32,7 +32,7 @@ if(localStorage.getItem('user_privacy_settings') >= 1)
 // listen to Eclipse.user_privacy Event
 jQuery(document).on('Eclipse.user_privacy',function(event,params)
 {
-	if(params.level >= 1)
+	if(params.level >= 2)
 	{
 		initFacebookLikePlugin();
 	}

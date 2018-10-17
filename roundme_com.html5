@@ -8,4 +8,4 @@ $embedSrc = 'https://roundme.com/embed/315890/1032245';
  * DO NOT EDIT ANYTHING BELOW THIS LINE UNLESS YOU KNOW WHAT YOU ARE DOING!
  */
 ?>
-<iframe data-privacy="1" width='1280' height='720' data-src='<?= $embedSrc; ?>' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe data-privacy="2" width='1280' height='720' data-src='<?= $embedSrc; ?>' frameborder='0' webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
