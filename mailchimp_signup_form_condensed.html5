@@ -12,7 +12,7 @@
 <!-- Example: replace this code -->
 
 <!-- Begin Mailchimp Signup Form -->
-<link data-privacy="2" data-href="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
+<link data-privacy="2" data-src="//cdn-images.mailchimp.com/embedcode/slim-10_7.css" rel="stylesheet" type="text/css">
 <style type="text/css">
 	#mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
 	/* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
