@@ -27,22 +27,24 @@ function initFacebookPixel()
 	f_b_q("init", '.$facebookPixelId.');
 	f_b_q("track", "PageView");
 }
+<!-- End Facebook Pixel Code -->
+'; 
+?>
 
-// Optin privacy setting token (level 3 statistic)
-if(localStorage.getItem("user_privacy_settings") >= 3)
+<script>
+jQuery(document).ready(function() 
 {
-  	initFacebookPixel();
-}
+	if( PrivacyManager.hasAccess(3) )
+	{
+		initFacebookPixel();
+	}
+});
 
-// listen to Eclipse.user_privacy Event
-jQuery(document).on("Eclipse.user_privacy",function(event,params)
+jQuery(document).on('Privacy.changed',function(event,params)
 {
-	if(params.level >= 3)
+	if( PrivacyManager.hasAccess(3) )
 	{
 		initFacebookPixel();
 	}
 });
 </script>
-<!-- End Facebook Pixel Code -->
-'; 
-?>

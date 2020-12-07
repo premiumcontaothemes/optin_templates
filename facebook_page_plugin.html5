@@ -33,26 +33,28 @@ function initFacebookPagePlugin()
   js.src = 'https://connect.facebook.net/de_DE/sdk.js#xfbml=1&version=v3.1&appId=" . $appId . "&autoLogAppEvents=1';
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
-
 }
+<!-- End Facebook Page Plugin -->
+";
+?>
 
-// Optin privacy setting token
-if(localStorage.getItem('user_privacy_settings') >= 2)
+<script>
+jQuery(document).ready(function() 
 {
-  	initFacebookPagePlugin();
-}
+	if( PrivacyManager.hasAccess(2) )
+	{
+		initFacebookPagePlugin();
+	}
+});
 
-// listen to Eclipse.user_privacy Event
-jQuery(document).on('Eclipse.user_privacy',function(event,params)
+jQuery(document).on('Privacy.changed',function(event,params)
 {
-	if(params.level >= 2)
+	if( PrivacyManager.hasAccess(2) )
 	{
 		initFacebookPagePlugin();
 	}
 });
 </script>
-<!-- End Facebook Page Plugin -->
-";
-?>
+
 <div id="fb-root"></div>
 <div class="fb-page" data-href="https://www.facebook.com/<?= $facebookPageUrl; ?>/" data-tabs="<?= $dataTabs; ?>" data-small-header="<?= $dataSmallHeader; ?>" data-adapt-container-width="<?= $dataAdaptContainerWidth; ?>" data-hide-cover="<?= $dataHideCover; ?>" data-show-facepile="<?= $dataShowFacepile; ?>"><blockquote cite="https://www.facebook.com/<?= $facebookPageUrl; ?>/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/<?= $facebookPageUrl; ?>/"><?= $facebookPageName; ?></a></blockquote></div>
