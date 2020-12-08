@@ -19,22 +19,24 @@ function initGoogleTagManager()
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','".$GoogleTagManagerKey."');
 }
+<!-- End Google Tag Manager -->
+";
+?>
 
-// Optin privacy setting token
-if(localStorage.getItem('user_privacy_settings') >= 3)
+<script>
+jQuery(document).ready(function() 
 {
-  	initGoogleTagManager();
-}
+	if( PrivacyManager.hasAccess(3) )
+	{
+		initGoogleTagManager();
+	}
+});
 
-// listen to Eclipse.user_privacy Event
-jQuery(document).on('Eclipse.user_privacy',function(event,params)
+jQuery(document).on('Privacy.changed',function(event,params)
 {
-	if(params.level >= 3)
+	if( PrivacyManager.hasAccess(3) )
 	{
 		initGoogleTagManager();
 	}
 });
 </script>
-<!-- End Google Tag Manager -->
-";
-?>

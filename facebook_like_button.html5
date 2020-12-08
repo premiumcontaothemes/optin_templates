@@ -22,24 +22,27 @@ function initFacebookLikePlugin()
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));
 }
+<!-- End Facebook Like Button -->
+";
+?>
 
-// Optin privacy setting token
-if(localStorage.getItem('user_privacy_settings') >= 2)
+<script>
+jQuery(document).ready(function() 
 {
-  	initFacebookLikePlugin();
-}
+	if( PrivacyManager.hasAccess(2) )
+	{
+		initFacebookLikePlugin();
+	}
+});
 
-// listen to Eclipse.user_privacy Event
-jQuery(document).on('Eclipse.user_privacy',function(event,params)
+jQuery(document).on('Privacy.changed',function(event,params)
 {
-	if(params.level >= 2)
+	if( PrivacyManager.hasAccess(2) )
 	{
 		initFacebookLikePlugin();
 	}
 });
 </script>
-<!-- End Facebook Like Button -->
-";
-?>
+
 <div id="fb-root"></div>
 <div class="fb-like" data-href="<?= $this->replaceInsertTags('{{env::url}}');?>/<?= $this->replaceInsertTags('{{env::request}}');?>" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
