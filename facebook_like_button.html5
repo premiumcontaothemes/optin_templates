@@ -23,6 +23,7 @@ function initFacebookLikePlugin()
 }(document, 'script', 'facebook-jssdk'));
 }
 <!-- End Facebook Like Button -->
+</script>
 ";
 ?>
 

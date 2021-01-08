@@ -28,6 +28,7 @@ function initFacebookPixel()
 	f_b_q("track", "PageView");
 }
 <!-- End Facebook Pixel Code -->
+</script>
 '; 
 ?>
 
